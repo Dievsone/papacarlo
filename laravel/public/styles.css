@@ -1,0 +1,469 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --bg: #0f0f0f;
+  --ink: #0d0d0d;
+  --muted: rgba(13, 13, 13, 0.6);
+  --white: #ffffff;
+  --glass: rgba(255, 255, 255, 0.92);
+  --cream: #f7f6f4;
+  --accent: #2c2f3a;
+  --accent-light: rgba(44, 47, 58, 0.12);
+  --gold: #e6c96a;
+  --shadow: 0 28px 80px rgba(18, 20, 23, 0.2);
+  --radius: 28px;
+  --radius-lg: 36px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  background: #0a0a0a;
+  color: var(--white);
+  line-height: 1.55;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0 0 16px;
+}
+
+p {
+  margin: 0 0 16px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.container {
+  width: min(1200px, 90vw);
+  margin: 0 auto;
+}
+
+.hero-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(120deg, rgba(10, 10, 10, 0.75), rgba(10, 10, 10, 0.2)),
+    radial-gradient(circle at top left, #1c6b6a, #0a0a0a 60%),
+    radial-gradient(circle at 75% 30%, rgba(200, 160, 90, 0.35), transparent 45%);
+}
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(10, 10, 10, 0.9), transparent 40%),
+    linear-gradient(0deg, rgba(10, 10, 10, 0.95), transparent 40%);
+}
+
+.hero-sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0) 35%
+  );
+  opacity: 0.12;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header-inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 0;
+}
+
+.brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 600;
+}
+
+.phone {
+  font-size: 14px;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(10, 10, 10, 0.2);
+}
+
+.btn-primary {
+  background: var(--white);
+  color: var(--ink);
+}
+
+.btn-light {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid rgba(13, 13, 13, 0.2);
+}
+
+.btn-dark {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero {
+  padding: 130px 0 90px;
+  text-align: center;
+}
+
+.hero-center h1 {
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+}
+
+.hero-subtitle {
+  max-width: 560px;
+  margin: 0 auto 28px;
+  font-size: 1.05rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-size: 12px;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.intro-card {
+  padding-bottom: 70px;
+}
+
+.card {
+  background: var(--glass);
+  color: var(--ink);
+  border-radius: var(--radius-lg);
+  padding: 34px;
+  box-shadow: var(--shadow);
+}
+
+.card p {
+  color: var(--muted);
+}
+
+.card-top {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.card-image {
+  border-radius: 22px;
+  min-height: 240px;
+  background:
+    linear-gradient(140deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)),
+    linear-gradient(120deg, #dad4c8, #a4a09b);
+}
+
+.card-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 26px 0;
+  align-items: center;
+}
+
+.card-stats strong {
+  font-size: 2.4rem;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.avatars {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.avatars span {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #c7bca7, #9aa0a3);
+  border: 2px solid var(--white);
+}
+
+.card-bottom {
+  background: var(--cream);
+  border-radius: 22px;
+  padding: 26px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-bottom p {
+  max-width: 460px;
+}
+
+.card-portrait {
+  position: absolute;
+  right: 24px;
+  bottom: -10px;
+  width: 180px;
+  height: 240px;
+  border-radius: 100px 100px 30px 30px;
+  background: linear-gradient(160deg, #f0d5d8, #f5e8d7);
+}
+
+.features {
+  padding: 90px 0;
+}
+
+.features-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.features-copy h2 {
+  color: var(--white);
+}
+
+.features-tags {
+  display: grid;
+  gap: 14px;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+}
+
+.plans {
+  padding: 80px 0 100px;
+  background: #0b0b0b;
+}
+
+.section-head {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.section-head.light p {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.plan-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  gap: 12px;
+}
+
+.plan-preview {
+  height: 140px;
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.12) 6px,
+      transparent 6px,
+      transparent 12px
+    );
+}
+
+.plan-meta {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.reviews {
+  padding: 80px 0 110px;
+}
+
+.review-card {
+  background: var(--glass);
+  color: var(--ink);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.review-card p,
+.review-card .form-note {
+  color: var(--muted);
+}
+
+.review-portrait {
+  width: 100%;
+  min-height: 260px;
+  border-radius: 24px;
+  background: linear-gradient(150deg, #f0d3d2, #f4e5db);
+}
+
+.cta-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.cta-form input {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(13, 13, 13, 0.1);
+}
+
+.form-note {
+  font-size: 12px;
+}
+
+.form-status {
+  font-size: 12px;
+}
+
+.site-footer {
+  padding: 30px 0 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0a0a0a;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 980px) {
+  .header-inner {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .hero {
+    padding-top: 110px;
+  }
+
+  .card-top,
+  .features-inner,
+  .plans-grid,
+  .review-card,
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .card-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .card-portrait {
+    position: static;
+    margin-top: 24px;
+    width: 100%;
+    height: 200px;
+    border-radius: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-subtitle {
+    font-size: 0.98rem;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .review-card {
+    padding: 24px;
+  }
+}
