@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>ЖК «Легенда» — открытие продаж</title>
     <meta
       name="description"
       content="Открытие продаж ЖК «Легенда». Современный жилой квартал с продуманной архитектурой, панорамными окнами и приватными дворами."
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="{{ asset('styles.css') }}" />
   </head>
   <body>
     <div class="hero-bg">
@@ -183,7 +184,8 @@
                 Оставьте заявку и получите подборку лучших вариантов с
                 персональным расчетом.
               </p>
-              <form class="cta-form" id="lead-form" method="post" action="/lead">
+              <form class="cta-form" method="post" action="{{ route('lead.store') }}">
+                @csrf
                 <input type="text" name="name" placeholder="Ваше имя" required />
                 <input
                   type="tel"
@@ -197,11 +199,9 @@
                 <span class="form-note">
                   Нажимая кнопку, вы соглашаетесь с политикой обработки данных.
                 </span>
-                <span
-                  class="form-status"
-                  id="form-status"
-                  aria-live="polite"
-                ></span>
+                @if (session('status'))
+                  <span class="form-status">{{ session('status') }}</span>
+                @endif
               </form>
             </div>
             <div class="review-portrait"></div>
@@ -226,37 +226,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      const form = document.getElementById("lead-form");
-      const status = document.getElementById("form-status");
-
-      form.addEventListener("submit", async (event) => {
-        event.preventDefault();
-        status.textContent = "Отправляем...";
-
-        const formData = new FormData(form);
-        const payload = Object.fromEntries(formData.entries());
-
-        try {
-          const response = await fetch(form.action, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload),
-          });
-
-          if (!response.ok) {
-            throw new Error("Ошибка отправки");
-          }
-
-          form.reset();
-          status.textContent =
-            "Заявка отправлена. Мы свяжемся с вами в течение 15 минут.";
-        } catch (error) {
-          status.textContent =
-            "Не удалось отправить заявку. Попробуйте еще раз.";
-        }
-      });
-    </script>
   </body>
 </html>
