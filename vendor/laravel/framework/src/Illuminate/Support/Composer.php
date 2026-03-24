@@ -237,13 +237,21 @@ class Composer
      */
     public function getVersion()
     {
+        if (! function_exists('proc_open')) {
+            return null;
+        }
+
         $command = array_merge($this->findComposer(), ['-V', '--no-ansi']);
 
-        $process = $this->getProcess($command);
+        try {
+            $process = $this->getProcess($command);
 
-        $process->run();
+            $process->run();
 
-        $output = $process->getOutput();
+            $output = $process->getOutput();
+        } catch (\Throwable $e) {
+            return null;
+        }
 
         if (preg_match('/(\d+(\.\d+){2})/', $output, $version)) {
             return $version[1];
