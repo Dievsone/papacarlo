@@ -40,6 +40,12 @@ Copy the output and paste into `APP_KEY` in the server `.env`.
 - If you see errors about missing composer.json, the repo is not in httpdocs or document root is wrong.
 - If you get `proc_open` errors from Composer, use `composer install --no-dev --no-scripts` in the deploy command.
 
+## Self-contained deploy (no Composer/Artisan on server)
+If `proc_open` is disabled and you cannot change deploy commands, deploy a self-contained repo:
+- Commit `vendor/` to the repository.
+- Commit the SQLite DB file: `database/database.sqlite`.
+- On the server, only update files from Git (no Composer, no Artisan).
+
 ## Permissions (via file manager)
 Ensure these folders are writable:
 - `storage`
