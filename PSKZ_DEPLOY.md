@@ -45,6 +45,7 @@ Copy the output and paste into `APP_KEY` in the server `.env`.
 ## Auto-deploy notes
 - PS.kz Composer must run **in repo root** (httpdocs).
 - If you see errors about missing composer.json, the repo is not in httpdocs or document root is wrong.
+- If you get `proc_open` errors from Composer, use `composer install --no-dev --no-scripts` in the deploy command.
 
 ## Permissions (via file manager)
 Ensure these folders are writable:
