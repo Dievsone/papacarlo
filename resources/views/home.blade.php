@@ -72,56 +72,37 @@
         </div>
       </section>
 
-      <section class="intro-card">
-        <div class="container">
-          <div class="card">
-            <div class="card-top">
-              <div class="card-copy">
-                <h2>
-                  PapaCarlo — это производство, где мебель становится частью архитектуры пространства
-                </h2>
-                <p>
-                  Мы берем на себя весь цикл: выезд и замер, дизайн-проект, производство, доставка и
-                  установка. Работаем с натуральным деревом, шпоном и современными покрытиями, чтобы
-                  изделие выглядело безупречно и служило долго.
-                </p>
-              </div>
-              <div class="card-image"></div>
-            </div>
-            <div class="card-stats">
+      <section class="about-block">
+        <div class="container about-grid">
+          <div class="about-copy">
+            <p class="eyebrow">О заводе</p>
+            <h2>
+              PapaCarlo — это столярный завод, где
+              <span class="accent">детали решают все</span>
+            </h2>
+            <p>
+              Мы берем на себя весь цикл: выезд и замер, дизайн-проект, производство, доставка и
+              установка. Работаем с натуральным деревом, шпоном и современными покрытиями, чтобы
+              изделие выглядело безупречно и служило долго.
+            </p>
+            <div class="about-stats">
               <div>
-                <strong>Замер</strong>
-                <span>приезжаем на объект и фиксируем детали</span>
+                <strong>Под ключ</strong>
+                <span>берем на себя все этапы</span>
               </div>
               <div>
-                <strong>Проект</strong>
-                <span>продумываем функционал и внешний вид</span>
+                <strong>Сроки</strong>
+                <span>контроль производства и монтажа</span>
               </div>
               <div>
-                <a
-                  class="btn btn-outline"
-                  href="https://wa.me/77017997605?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20%D0%BC%D0%B5%D0%B1%D0%B5%D0%BB%D0%B8."
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Обсудить проект
-                </a>
-                <div class="avatars">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
+                <strong>Качество</strong>
+                <span>аккуратные стыки и фурнитура</span>
               </div>
             </div>
-            <div class="card-bottom">
-              <h3>Делаем сложные изделия простыми в эксплуатации</h3>
-              <p>
-                Учитываем нагрузку, долговечность фурнитуры и удобство в ежедневном использовании.
-                В результате вы получаете мебель, которая ощущается как продолжение интерьера.
-              </p>
-              <div class="card-portrait"></div>
-            </div>
+          </div>
+          <div class="about-media">
+            <div class="image-placeholder image-hero" data-size="640x520"></div>
+            <div class="image-placeholder image-detail" data-size="420x300"></div>
           </div>
         </div>
       </section>
@@ -197,119 +178,58 @@
               <h3>Двери и порталы</h3>
               <p>Скрытые коробки, фрезеровка, шпонированные и окрашенные полотна.</p>
               <div class="detail-meta">Фурнитура премиум-класса, точные зазоры, высокий ресурс</div>
-              <a
-                class="btn btn-dark"
-                href="https://wa.me/77017997605?text=%D0%9D%D1%83%D0%B6%D0%BD%D1%8B%20%D0%B4%D0%B2%D0%B5%D1%80%D0%B8%20%D0%B8%20%D0%BF%D0%BE%D1%80%D1%82%D0%B0%D0%BB%D1%8B%2C%20%D0%BF%D1%80%D0%BE%D1%88%D1%83%20%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82."
-                target="_blank"
-                rel="noopener"
-              >
-                Запросить расчет
-              </a>
             </article>
             <article class="detail-card product-anchor" id="kitchens">
               <h3>Кухни</h3>
               <p>Проектируем эргономику, фасады и системы хранения под ваш ритм жизни.</p>
               <div class="detail-meta">Фасады: эмаль, шпон, массив. Техника и освещение под ключ</div>
-              <a
-                class="btn btn-dark"
-                href="https://wa.me/77017997605?text=%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%BA%D1%83%D1%85%D0%BD%D1%8E%20%D0%BF%D0%BE%D0%B4%20%D0%BA%D0%BB%D1%8E%D1%87%2C%20%D0%BF%D1%80%D0%BE%D1%88%D1%83%20%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82."
-                target="_blank"
-                rel="noopener"
-              >
-                Запросить расчет
-              </a>
             </article>
             <article class="detail-card product-anchor" id="stairs">
               <h3>Лестницы</h3>
               <p>Ступени, косоуры, перила, стекло и металл в единой композиции.</p>
               <div class="detail-meta">Безопасные конструкции, точная геометрия и чистый монтаж</div>
-              <a
-                class="btn btn-dark"
-                href="https://wa.me/77017997605?text=%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%BB%D0%B5%D1%81%D1%82%D0%BD%D0%B8%D1%86%D0%B0%2C%20%D0%BF%D1%80%D0%BE%D1%88%D1%83%20%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82."
-                target="_blank"
-                rel="noopener"
-              >
-                Запросить расчет
-              </a>
             </article>
             <article class="detail-card product-anchor" id="panels">
               <h3>Стеновые панели</h3>
               <p>Рейки, панели, акустика, скрытые двери и интеграция света.</p>
               <div class="detail-meta">Создаем акцентные стены и мягкую акустику</div>
-              <a
-                class="btn btn-dark"
-                href="https://wa.me/77017997605?text=%D0%9D%D1%83%D0%B6%D0%BD%D1%8B%20%D1%81%D1%82%D0%B5%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5%20%D0%BF%D0%B0%D0%BD%D0%B5%D0%BB%D0%B8%2C%20%D0%BF%D1%80%D0%BE%D1%88%D1%83%20%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82."
-                target="_blank"
-                rel="noopener"
-              >
-                Запросить расчет
-              </a>
             </article>
             <article class="detail-card product-anchor" id="wardrobes">
               <h3>Шкафы и гардеробные</h3>
               <p>Индивидуальные системы хранения, внутреннее освещение и зонирование.</p>
               <div class="detail-meta">Продумываем организацию пространства до сантиметра</div>
-              <a
-                class="btn btn-dark"
-                href="https://wa.me/77017997605?text=%D0%A8%D0%BA%D0%B0%D1%84%D1%8B%20%D0%B8%20%D0%B3%D0%B0%D1%80%D0%B4%D0%B5%D1%80%D0%BE%D0%B1%D0%BD%D1%8B%D0%B5%20%D0%BF%D0%BE%D0%B4%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%2C%20%D0%BF%D1%80%D0%BE%D1%88%D1%83%20%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82."
-                target="_blank"
-                rel="noopener"
-              >
-                Запросить расчет
-              </a>
             </article>
             <article class="detail-card product-anchor" id="tables">
               <h3>Столы и столешницы</h3>
               <p>Обеденные, рабочие, переговорные столы — в нужном размере и форме.</p>
               <div class="detail-meta">Массив, шпон, камень, комбинированные материалы</div>
-              <a
-                class="btn btn-dark"
-                href="https://wa.me/77017997605?text=%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%20%D1%81%D1%82%D0%BE%D0%BB%20%D0%B8%D0%BB%D0%B8%20%D1%81%D1%82%D0%BE%D0%BB%D0%B5%D1%88%D0%BD%D0%B8%D1%86%D0%B0%2C%20%D0%BF%D1%80%D0%BE%D1%88%D1%83%20%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82."
-                target="_blank"
-                rel="noopener"
-              >
-                Запросить расчет
-              </a>
             </article>
             <article class="detail-card product-anchor" id="chairs">
               <h3>Стулья и мягкая мебель</h3>
               <p>Деревянные каркасы, обивка, подбор тканей и стойких материалов.</p>
               <div class="detail-meta">Мягкие группы под дизайн кухни и гостиной</div>
-              <a
-                class="btn btn-dark"
-                href="https://wa.me/77017997605?text=%D0%9D%D1%83%D0%B6%D0%BD%D1%8B%20%D1%81%D1%82%D1%83%D0%BB%D1%8C%D1%8F%20%D0%B8%20%D0%BC%D1%8F%D0%B3%D0%BA%D0%B0%D1%8F%20%D0%BC%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C%2C%20%D0%BF%D1%80%D0%BE%D1%88%D1%83%20%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82."
-                target="_blank"
-                rel="noopener"
-              >
-                Запросить расчет
-              </a>
             </article>
             <article class="detail-card product-anchor" id="beds">
               <h3>Кровати и тумбы</h3>
               <p>Изголовья, подсветка, ящики хранения и ровные стыки.</p>
               <div class="detail-meta">Продумываем комфорт и эргономику спальни</div>
-              <a
-                class="btn btn-dark"
-                href="https://wa.me/77017997605?text=%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%BA%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D0%B8%20%D1%82%D1%83%D0%BC%D0%B1%D1%8B%2C%20%D0%BF%D1%80%D0%BE%D1%88%D1%83%20%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82."
-                target="_blank"
-                rel="noopener"
-              >
-                Запросить расчет
-              </a>
             </article>
             <article class="detail-card product-anchor" id="commercial">
               <h3>Коммерческие проекты</h3>
               <p>Ресепшн, барные стойки, витрины, мебель для офисов и шоурумов.</p>
               <div class="detail-meta">Соблюдаем сроки и стандарты эксплуатации</div>
-              <a
-                class="btn btn-dark"
-                href="https://wa.me/77017997605?text=%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%BC%D0%B5%D0%B1%D0%B5%D0%BB%D1%8C%20%D0%B4%D0%BB%D1%8F%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%2C%20%D0%BF%D1%80%D0%BE%D1%88%D1%83%20%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82."
-                target="_blank"
-                rel="noopener"
-              >
-                Запросить расчет
-              </a>
             </article>
+          </div>
+          <div class="section-cta">
+            <p>Нужна оценка проекта? Напишите в WhatsApp — мы уточним детали и подскажем решения.</p>
+            <a
+              class="btn btn-primary"
+              href="https://wa.me/77017997605?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%9D%D1%83%D0%B6%D0%BD%D0%BE%20%D0%BE%D1%86%D0%B5%D0%BD%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%20%D0%BF%D0%BE%20%D1%84%D0%BE%D1%82%D0%BE%20%D0%B8%20%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%80%D0%B0%D0%BC."
+              target="_blank"
+              rel="noopener"
+            >
+              Запросить расчет
+            </a>
           </div>
         </div>
       </section>

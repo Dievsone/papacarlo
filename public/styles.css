@@ -42,7 +42,7 @@ h1,
 h2,
 h3 {
   font-family: "Montserrat", "Segoe UI", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.01em;
   margin: 0 0 16px;
 }
@@ -115,6 +115,7 @@ p {
   font-size: 20px;
   letter-spacing: 0.28em;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .nav {
@@ -125,6 +126,7 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-family: "Montserrat", "Segoe UI", sans-serif;
+  font-weight: 600;
 }
 
 .header-cta {
@@ -210,86 +212,90 @@ p {
   font-size: 12px;
   margin-bottom: 18px;
   color: rgba(255, 255, 255, 0.65);
+  font-family: "Montserrat", "Segoe UI", sans-serif;
+  font-weight: 600;
 }
 
-.intro-card {
-  padding-bottom: 70px;
+.accent {
+  color: var(--gold);
 }
 
-.card {
-  background: var(--glass);
-  color: var(--ink);
-  border-radius: var(--radius-lg);
-  padding: 34px;
-  box-shadow: var(--shadow);
+.about-block {
+  padding: 80px 0 90px;
 }
 
-.card p {
-  color: var(--muted);
-}
-
-.card-top {
+.about-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1.05fr 0.95fr;
   gap: 32px;
   align-items: center;
 }
 
-.card-image {
-  border-radius: 22px;
-  min-height: 240px;
-  background:
-    linear-gradient(140deg, rgba(20, 12, 6, 0.1), rgba(20, 12, 6, 0.55)),
-    linear-gradient(120deg, #e0c7a9, #b98f6a);
+.about-copy p {
+  color: rgba(255, 255, 255, 0.78);
 }
 
-.card-stats {
+.about-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin: 26px 0;
-  align-items: center;
+  gap: 16px;
+  margin-top: 22px;
 }
 
-.card-stats strong {
-  font-size: 2.4rem;
+.about-stats strong {
+  display: block;
   font-family: "Montserrat", "Segoe UI", sans-serif;
+  font-size: 1rem;
+  color: var(--white);
+  margin-bottom: 6px;
 }
 
-.avatars {
-  display: flex;
-  gap: 6px;
-  margin-top: 10px;
+.about-stats span {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.95rem;
 }
 
-.avatars span {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: linear-gradient(120deg, #c7bca7, #9aa0a3);
-  border: 2px solid var(--white);
+.about-media {
+  display: grid;
+  gap: 16px;
 }
 
-.card-bottom {
-  background: var(--cream);
+.image-placeholder {
   border-radius: 22px;
-  padding: 26px;
+  background:
+    linear-gradient(140deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01)),
+    repeating-linear-gradient(
+      135deg,
+      rgba(197, 123, 67, 0.3),
+      rgba(197, 123, 67, 0.3) 12px,
+      transparent 12px,
+      transparent 24px
+    );
+  border: 1px solid rgba(197, 123, 67, 0.35);
   position: relative;
   overflow: hidden;
 }
 
-.card-bottom p {
-  max-width: 460px;
+.image-placeholder::after {
+  content: attr(data-size);
+  position: absolute;
+  inset: auto auto 16px 16px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(18, 11, 7, 0.7);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: "Montserrat", "Segoe UI", sans-serif;
 }
 
-.card-portrait {
-  position: absolute;
-  right: 24px;
-  bottom: -10px;
-  width: 180px;
-  height: 240px;
-  border-radius: 100px 100px 30px 30px;
-  background: linear-gradient(160deg, #e7c8a3, #f1e0cf);
+.image-hero {
+  height: 520px;
+}
+
+.image-detail {
+  height: 280px;
 }
 
 .features {
@@ -408,6 +414,22 @@ p {
 
 .product-anchor {
   scroll-margin-top: 110px;
+}
+
+.section-cta {
+  margin-top: 26px;
+  padding: 22px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(197, 123, 67, 0.24);
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+}
+
+.section-cta p {
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
 }
 
 .features-inner {
@@ -664,7 +686,7 @@ p {
     padding-top: 110px;
   }
 
-  .card-top,
+  .about-grid,
   .features-inner,
   .materials-inner,
   .product-grid,
@@ -676,16 +698,8 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .card-stats {
+  .about-stats {
     grid-template-columns: 1fr;
-  }
-
-  .card-portrait {
-    position: static;
-    margin-top: 24px;
-    width: 100%;
-    height: 200px;
-    border-radius: 22px;
   }
 }
 
