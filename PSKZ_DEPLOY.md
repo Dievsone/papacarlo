@@ -24,6 +24,13 @@ APP_URL=https://papacarlo.kz
 APP_DEBUG=false
 APP_KEY=base64:PASTE_FROM_LOCAL
 
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=papacarlo
+DB_USERNAME=papacarlo
+DB_PASSWORD=YOUR_PASSWORD
+
 TELEGRAM_BOT_TOKEN=YOUR_TOKEN
 TELEGRAM_CHAT_ID=YOUR_CHAT_ID
 ```
@@ -43,3 +50,9 @@ Copy the output and paste into `APP_KEY` in the server `.env`.
 Ensure these folders are writable:
 - `storage`
 - `bootstrap/cache`
+
+## DB notes
+- If you switch to MySQL, run migrations on the server:
+```
+php artisan migrate --force
+```
