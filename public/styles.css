@@ -675,6 +675,7 @@ p {
   .header-inner {
     grid-template-columns: 1fr;
     justify-items: start;
+    gap: 16px;
   }
 
   .nav {
@@ -704,20 +705,92 @@ p {
 }
 
 @media (max-width: 600px) {
+  .brand {
+    font-size: 16px;
+    letter-spacing: 0.2em;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+
   .header-cta {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .header-cta .btn {
+    width: 100%;
+  }
+
+  .hero {
+    padding: 100px 0 70px;
+  }
+
+  .hero-center h1 {
+    font-size: clamp(2.1rem, 9vw, 3rem);
   }
 
   .hero-subtitle {
     font-size: 0.98rem;
   }
 
-  .card {
-    padding: 24px;
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .eyebrow {
+    letter-spacing: 0.3em;
+    font-size: 11px;
+  }
+
+  .about-block {
+    padding: 60px 0 70px;
+  }
+
+  .image-hero {
+    height: 320px;
+  }
+
+  .image-detail {
+    height: 200px;
+  }
+
+  .product-card,
+  .detail-card,
+  .materials-card,
+  .plan-card,
+  .gallery-card,
+  .contact-card {
+    padding: 16px;
+  }
+
+  .product-grid,
+  .detail-grid,
+  .plans-grid,
+  .gallery-grid {
+    gap: 14px;
+  }
+
+  .section-cta {
+    padding: 18px;
+  }
+
+  .gallery-image {
+    height: 160px;
   }
 
   .review-card {
-    padding: 24px;
+    padding: 22px;
   }
 }
